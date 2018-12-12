@@ -6,8 +6,9 @@ class Index extends React.Component {
 
     render () {
         return (
-            <div>111111</div>
-            <Player />
+            <div>
+                <Player />
+            </div>
         )
     }
 }
