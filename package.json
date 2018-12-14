@@ -6,11 +6,13 @@
   "author": "carlos",
   "license": "MIT",
   "scripts": {
-    "dev": "NODE_ENV=development webpack --config config/webpack.config.dev.js --mode=development -w",
-    "build": "NODE_ENV=production webpack --config webpack.config.js --mode=production",
+    "dev": "webpack-dev-server --hot --inline --config config/webpack.config.dev.js --mode development",
+    "build": "webpack --config webpack.config.js --mode=production",
     "lint": "eslint ."
   },
   "dependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
     "video.js": "^7.3.0"
   },
   "peerDependencies": {
@@ -19,6 +21,10 @@
   },
   "devDependencies": {
     "@babel/core": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
     "css-loader": "^2.0.0",
     "eslint": "^5.10.0",
@@ -31,6 +37,7 @@
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
     "webpack": "^4.27.1",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
   }
 }
