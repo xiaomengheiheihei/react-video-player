@@ -22,7 +22,9 @@ module.exports = {
         "comma-dangle": 0,
         "react/jsx-uses-vars": 1,
         "react/display-name": 1,
-        "no-unused-vars": "warn",
+        "no-unused-vars": 0,
+        "react/prop-types": 0,
+        "react/no-string-refs": 0,
         "no-console": 1,
         "no-unexpected-multiline": "warn"
     },

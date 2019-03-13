@@ -6,7 +6,36 @@ class Index extends React.Component {
 
     state = {
         playerOption: {
-            url: 'http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4',
+            sources: [
+                // {
+                //     type: "video/mp4",
+                //     src: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+                // },
+                {
+                    type: "rtmp/mp4",
+                    src: 'rtmp://pili-publish.tt.test.cloudvdn.com/test-demo01/1084787021836214273@wmt_abckey94'
+                }
+            ],
+            autoPlay: "muted",
+            preload: "auto",
+            width: "400px",
+            height: "220px",
+            techOrder: ["html5","flash"],
+            plugins: {},
+            controls: true,
+            language: 'zh-CN',
+            overNative: true,
+            sourceOrder: true,
+            // controlBar: {
+            //     remainingTimeDisplay: false,
+            //     playToggle: {},
+            //     progressControl: {},
+            //     fullscreenToggle: {},
+            //     volumeMenuButton: {
+            //       inline: false,
+            //       vertical: true
+            //     }
+            // }
         }
     }
 

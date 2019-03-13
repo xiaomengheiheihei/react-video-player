@@ -1,16 +1,30 @@
 import React from 'react';
 import './player.scss'
 import VideoJs from 'video.js'
+require('video.js/dist/video-js.css')
+require('videojs-flash');
+
+const videojs = window.videojs || VideoJs
 
 class Player extends React.Component {
     state = {
 
     }
+    video = React.createRef();
+    player = null
+    componentDidMount () {
+        this.initVideoPlayer();
+    }
+    initVideoPlayer () {
+        const option = this.props.playerOption;
+        const playerid = this.video.current;
+        this.player = videojs(playerid, option, ()=> {
+            videojs.log('Your player is ready!');
+        })
+    }
     render () {
         return (
-            <div id="react-player">
-                <video ref="video" autoPlay controls src={this.props.playerOption.url}></video>
-            </div>
+            <div id="react-player"><video className="video-js" ref={this.video}></video></div>
         )
     }
 }
